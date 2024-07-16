@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <font color="gold">
+        <title>Project Post-It</title>
+        </font>
+    </head>
+    <body style="background-color:pink;">
+        <font color="RebeccaPurple">
+        <h2>List Post-It Notes</h2>
+        </font>
+
+        <font color="SlateBlue">
+        <table border="1">
+            <tr>
+                <th>#</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Date</th>
+                <th>Priority</th>
+                <th>Mark</th>
+            </tr>
+            {% for row in data %}
+            <tr>
+                {% for d in row %}
+                <td>{{ d }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+        </font>
+        <p><a href="/">Back to Menu</a></p>
+    </body>
+</html>

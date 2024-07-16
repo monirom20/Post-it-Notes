@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Post-It Notes project</title>
+    </head>
+    <body style="background-color:pink;">
+    <font color="RebeccaPurple">
+        <h2>Search Result</h2>
+    </font>
+        <table border="1">
+            <tr>
+                <th>#</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Date</th>
+                <th>Priority</th>
+                <th>Mark</th>
+            </tr>
+            {% for fila in data %}
+                <tr>
+                    {% for columna in fila %}
+                        <td>{{ columna }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+
+        </table>
+
+        <p><a href="/">Back to Menu</a></p>
+    </body>
+</html>

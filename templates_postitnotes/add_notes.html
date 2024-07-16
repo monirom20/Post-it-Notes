@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Project Post-It</title>
+    </head>
+    <body style="background-color:pink;">
+        <font color="RebeccaPurple">
+        <h2>Add Post-It Notes</h2>
+        </font>
+
+        <font color="RebeccaPurple">
+        <form action="/postit/save_note" method="POST">
+            <label for="titulo">Title</label>
+            <input required type="text" name="titulo">
+            <label for="descripcion">Description:</label>
+            <input type="text" name="descripcion">
+            <label for="fecha">Date:</label>
+            <input required type="date" placeholder="dd/mm/yyyy" name="fecha">
+            <label for="prioridad">Priority:</label>
+            <input required type="number" name="prioridad" min="0" max="10">
+            <label for="marca">Code for mark:</label>
+            <input required type="number" name="marca" min="1" max="4">
+            <button>Save Note</button>
+        </form>
+        </font>
+
+        <p>Marks for the note:</p>
+        <ul>
+            {% for fila in data %}
+                <li>{{ fila[0] }} -> {{ fila[1] }}</li>
+            {% endfor %}
+        </ul>
+
+
+        <p><a href="/">Back to Main</a></p>
+    </body>
+</html>
