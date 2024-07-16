@@ -7,3 +7,6 @@ Installation
 Flask: pip install Flask
 
 flask-mysql : pip install flask-mysql
+
+# License
+This project is licensed under the MIT License. 
